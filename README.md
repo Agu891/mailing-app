@@ -50,7 +50,7 @@ IMPORTANT: YOU HAVE TO SPECIFICALLY USE THESE ENVIRONMENT VARIABLE NAMES AS THEY
 
 1. First you must download Terraform from [here](https://developer.hashicorp.com/terraform/downloads?product_intent=terraform)
 2. And then follow the steps of the setup that are in [this](https://www.youtube.com/watch?v=SLB_c_ayRMo&ab_channel=freeCodeCamp.org) video starting from minute 6:00 depending on your os the steps are different but are covered in this video
-3. Create a terraform folder and then a main.tf file inside of it... and paste the following changing your region, access_key & secret_key
+3. Go to terraform folder and then click in the main.tf file inside of it, change the following
 
 ```json
 provider "aws"  {
@@ -58,44 +58,6 @@ provider "aws"  {
     access_key = "YOUR_ACCESS_KEY"
     secret_key = "YOUR_SECRET_ACCESS_KEY"
 }
-
-
- // Create a DynamoTable
-
-resource "aws_dynamodb_table" "basic-dynamodb-table" {
-  name           = "Emails"
-  billing_mode   = "PROVISIONED"
-  read_capacity  = 5
-  write_capacity = 5
-  hash_key       = "email_status"
-  range_key      = "email_date"
-
-  attribute {
-    name = "email_status"
-    type = "S"
-  }
-
-  attribute {
-    name = "email_date"
-    type = "S"
-  }
-
-  ttl {
-    attribute_name = "TimeToExist"
-    enabled        = false
-  }
-
-
-
-  tags = {
-    Name        = "dynamodb-table-1"
-    Environment = "production"
-  }
-}
-
-
-
-
 
 ```
 
