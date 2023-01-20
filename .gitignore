@@ -14,7 +14,10 @@ lerna-debug.log*
 # OS
 .DS_Store
 .env
-/terraform
+.terraform 
+*.tfstate
+*.tfstate.backup
+*.auto.tfvars
 # Tests
 /coverage
 /.nyc_output
