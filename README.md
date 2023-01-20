@@ -4,14 +4,21 @@ App developed in [Nest](https://github.com/nestjs/nest) alongside AWS
 
 ## Steps to follow on this version (locally with your own aws account)
 
-1.  First we need to create an AWS account, after this we need our credentials(Access key Id , Secret Access Key) which they'll be in AWS when we click on the profile name and then we click on Security Credentials <img src="https://res.cloudinary.com/dhfwuqzoz/image/upload/v1674227563/Images%20for%20mailing%20app%20readme/First_steps_mdtshd.png" />
+1.First we need to create an AWS account, after this we need our credentials(Access key Id , Secret Access Key) which they'll be in AWS when we click on the profile name and then we click on Security Credentials
+
+ <img src="https://res.cloudinary.com/dhfwuqzoz/image/upload/v1674227563/Images%20for%20mailing%20app%20readme/First_steps_mdtshd.png" />
 
 After doing this a new tab will be opened and then we've got to scroll down to see Access key tab and then click on Create new access Key
 <img src="https://res.cloudinary.com/dhfwuqzoz/image/upload/v1674227920/Images%20for%20mailing%20app%20readme/access_keys_pgt8kx.png" />
 
-after this another screen will pop up, it's pretty straight forward just click on Create Access Key on the bottom right and once this is done, it will show you both key which you can download(I recommend it) .
+after this another screen will pop up, it's pretty straight forward just click on Create Access Key on the bottom right
+<img src = "https://res.cloudinary.com/dhfwuqzoz/image/upload/v1674247180/Images%20for%20mailing%20app%20readme/Create_access_key_wtxmgn.png" />
 
-IMPORTANT : THIS IS THE FIRST AND ONLY TIME AWS WILL SHOW YOUR THIS KEYS THAT'S WHY IS IMPORTANT TO DOWNLOAD THE FILE OR WRITE THEM DOWN.
+and once this is done, it will show you both key which you can download(I recommend it) .
+
+<img src="https://res.cloudinary.com/dhfwuqzoz/image/upload/v1674247959/Images%20for%20mailing%20app%20readme/Access_keys_options_rem9ks.png" />
+
+IMPORTANT : THIS IS THE FIRST AND ONLY TIME AWS WILL SHOW YOUR SECRET ACCESS KEY THAT'S WHY IS IMPORTANT TO DOWNLOAD THE FILE OR WRITE THEM DOWN.
 
 2.  There are 3 ways to loggin your credentials:
 
@@ -103,8 +110,6 @@ Endpoint used to retrieve failed Emails GET REQUEST :
 http://localhost:3000/email/error
 
 It'll return an object that looks like this :
-Note: the object returned will contain all mails that failed to be sent by SES with all their information in order from the most recent.
-Note2: the error_message property will contain the error returned from the SES service and a little description of what happened
 
 ```json
 [
@@ -140,6 +145,10 @@ Note2: the error_message property will contain the error returned from the SES s
   }
 ]
 ```
+
+Note: the object returned will contain all mails that failed to be sent by SES with all their information in order from the most recent.
+
+Note2: the error_message property will contain the error returned from the SES service and a little description of what happened
 
 ## Installation
 
