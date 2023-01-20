@@ -109,82 +109,34 @@ Note2: the error_message property will contain the error returned from the SES s
 ```json
 [
   {
-    "email_body": {
-      "S": "<h1> title</h1> <p> Im a paragraph </p>"
-    },
-    "receiver": {
-      "S": "test@mail.com"
-    },
-    "sender": {
-      "S": "test.1@gmail.com"
-    },
-    "subject": {
-      "S": "test from postman"
-    },
-    "error_message": {
-      "S": "MessageRejected: Email address is not verified. The following identities failed the check in region SA-EAST-1: ajja@mail.com"
-    },
-    "email_date": {
-      "S": "Thu, 19 Jan 2023 20:57:44 GMT"
-    },
-    "email_id": {
-      "S": "20560bb1-078c-4396-ade6-5ee849dbace7"
-    },
-    "email_status": {
-      "S": "ERROR"
-    }
+    "email_body": "<h1> Titule  </h1> <p> soy un parrafo </p>",
+    "receiver": "asafaafsasfsfssffs.1@gmail.com",
+    "sender": "agu89.1@gmail.com",
+    "subject": "Prueba desde postman",
+    "error_message": "MessageRejected: Email address is not verified. The following identities failed the check in region SA-EAST-1: asafaafsasfsfssffs.1@gmail.com",
+    "email_date": "Fri, 20 Jan 2023 20:25:50 GMT",
+    "email_id": "1a02df96-2b7a-44e7-b756-ea2e3d0d3db7",
+    "email_status": "ERROR"
   },
   {
-    "email_body": {
-      "S": "<h1> title</h1> <p> Im a paragraph </p>"
-    },
-    "receiver": {
-      "S": "test@mail.com"
-    },
-    "sender": {
-      "S": "test.1@gmail.com"
-    },
-    "subject": {
-      "S": "test from postman"
-    },
-    "error_message": {
-      "S": "MessageRejected: Email address is not verified. The following identities failed the check in region SA-EAST-1: ajja@mail.com"
-    },
-    "email_date": {
-      "S": "Thu, 19 Jan 2023 20:57:10 GMT"
-    },
-    "email_id": {
-      "S": "8d10e462-a55f-4c18-a809-11321215dc9d"
-    },
-    "email_status": {
-      "S": "ERROR"
-    }
+    "email_body": "<h1> Titule  </h1> <p> soy un parrafo </p>",
+    "receiver": "asafasfssffs.1@gmail.com",
+    "sender": "agu89.1@gmail.com",
+    "subject": "Prueba desde postman",
+    "error_message": "MessageRejected: Email address is not verified. The following identities failed the check in region SA-EAST-1: asafasfssffs.1@gmail.com",
+    "email_date": "Fri, 20 Jan 2023 20:25:48 GMT",
+    "email_id": "2a0db677-61d1-4ba2-956e-14d5ba7c485d",
+    "email_status": "ERROR"
   },
   {
-    "email_body": {
-      "S": "<h1> title</h1> <p> Im a paragraph </p>"
-    },
-    "receiver": {
-      "S": "test@ail.com"
-    },
-    "sender": {
-      "S": "test.1@gmail.com"
-    },
-    "subject": {
-      "S": "test from postman"
-    },
-    "error_message": {
-      "S": "MessageRejected: Email address is not verified. The following identities failed the check in region SA-EAST-1: sarasa@ail.com"
-    },
-    "email_date": {
-      "S": "Thu, 19 Jan 2023 16:39:13 GMT"
-    },
-    "email_id": {
-      "S": "33b166d0-5017-4c1a-a69d-1a9e4b966e16"
-    },
-    "email_status": {
-      "S": "ERROR"
-    }
+    "email_body": "<h1> Titule  </h1> <p> soy un parrafo </p>",
+    "receiver": "asasffs.1@gmail.com",
+    "sender": "agu89.1@gmail.com",
+    "subject": "Prueba desde postman",
+    "error_message": "MessageRejected: Email address is not verified. The following identities failed the check in region SA-EAST-1: asasffs.1@gmail.com",
+    "email_date": "Fri, 20 Jan 2023 20:25:45 GMT",
+    "email_id": "ff46d32a-1a16-47d1-893f-d26ec0f65fae",
+    "email_status": "ERROR"
   }
 ]
 ```

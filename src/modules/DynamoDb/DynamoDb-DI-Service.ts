@@ -1,9 +1,11 @@
 // Import required AWS SDK clients and commands for Node.js
 import { PutItemCommand, QueryCommand } from '@aws-sdk/client-dynamodb';
+import { unmarshall } from '@aws-sdk/util-dynamodb';
 import { ddbClient } from './ddbClient';
 import { Injectable } from '@nestjs/common';
 import { SendEmail } from '../Send/send-email-interface';
 import { v4 as uuidv4 } from 'uuid';
+
 @Injectable()
 export class DynamoDbService {
   async addEmail(params: SendEmail) {
@@ -48,7 +50,8 @@ export class DynamoDbService {
 
     try {
       const data = await ddbClient.send(new QueryCommand(params));
-      const firstFiftyItems = data.Items.slice(0, 50);
+      const dataToJson = data.Items.map((items) => unmarshall(items));
+      const firstFiftyItems = dataToJson.slice(0, 50);
       return firstFiftyItems;
     } catch (err) {
       console.log('Error', err);
