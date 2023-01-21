@@ -5,7 +5,8 @@ import { DynamoDbService } from '../DynamoDb/DynamoDb-DI-Service';
 export class EmailService {
   constructor(private dynamoDbService: DynamoDbService) {}
 
-  async getErrorEmails() {
+  async getErrorEmails(): Promise<string> {
+    //*Revisar promises
     return this.dynamoDbService.getEmails();
   }
 }
