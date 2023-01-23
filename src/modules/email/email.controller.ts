@@ -9,11 +9,11 @@ export class EmailController {
   @ApiOperation({
     description: 'Get latests error Emails',
     summary:
-      'This endpoint retrieves the last 50 emails with all their respective information, error status and error messages',
+      'This endpoint retrieves the last 50 emails that failed with all their respective information, error status and error messages',
   })
   @ApiOkResponse({ type: Promise<SendEmail[]> })
   @Get('/error')
-  async getErrorEmails() {
+  async getErrorEmails(): Promise<SendEmail[]> {
     return this.emailService.getErrorEmails();
   }
 }
