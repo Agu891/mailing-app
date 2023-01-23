@@ -11,7 +11,6 @@ export class MailingService {
   ) {}
 
   async sendEmails(body: SendEmail): Promise<string> {
-    //*Revisar promesas
     if (
       !(await this.sendEmailService.SendEmail(body).then((res) => res?.Error))
     ) {
