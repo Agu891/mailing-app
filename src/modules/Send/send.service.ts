@@ -11,9 +11,10 @@ export class MailingService {
   ) {}
 
   async sendEmails(body: SendEmail): Promise<string> {
-    if (
-      !(await this.sendEmailService.SendEmail(body).then((res) => res?.Error))
-    ) {
+    const responseError = await this.sendEmailService
+      .SendEmail(body)
+      .then((res) => res?.Error);
+    if (!responseError) {
       body.status = 'SUCCESS';
       body.error_message = 'No hubo errores en este mensaje';
       await this.dynamoDbService.addEmail(body);

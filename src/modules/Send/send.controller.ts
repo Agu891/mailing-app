@@ -1,25 +1,18 @@
 import { Controller, Post, Body } from '@nestjs/common';
 import { MailingService } from './send.service';
 import { SendEmailsDto } from './send-email-dto';
-
+import { ApiOperation, ApiOkResponse } from '@nestjs/swagger';
 @Controller('mailing')
 export class MailingController {
   constructor(private mailingService: MailingService) {}
 
-  /* 
-    TODO 
-      Falta swagger annotations
-      Falta definir el DTO en las annotations
-      Falta definir el return de los metodos
-
-      @ApiOperation({
-        description: 'Find all islands category',
-        summary: 'Find all islands category',
-      })
-      @ApiOkResponse({ type: FindAllResponse<IslandCategoryDocument> })
-  */
+  @ApiOperation({
+    description: 'Send Emails',
+    summary: 'This endpoint sends emails to the desired  addresses',
+  })
+  @ApiOkResponse({ type: SendEmailsDto })
   @Post()
-  async sendEmails(@Body() body: SendEmailsDto) {
+  async sendEmails(@Body() body: SendEmailsDto): Promise<string> {
     return this.mailingService.sendEmails(body);
   }
 }
